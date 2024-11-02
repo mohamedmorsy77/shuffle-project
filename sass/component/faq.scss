@@ -1,0 +1,24 @@
+.faq {
+  .content {
+    h3 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 15px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
+  }
+}
+
+.faq {
+  background-color: $bgColor;
+  .accordion-button {
+    span {
+      color: $headingColor;
+      @include transition-handling(0.3s);
+    }
+    &:hover span {
+      color: $primaryColor;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.call-to-action {
+    .container {
+      a {
+        @include links-style(3rem, transparent);
+        border: 1px solid $primaryColor;
+      }
+    }
+  }

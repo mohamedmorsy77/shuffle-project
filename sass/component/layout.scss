@@ -1,0 +1,19 @@
+header {
+  z-index: 100;
+}
+section:not(.hero-section) {
+  padding: 6rem 0 !important;
+}
+.hero-section::before {
+  @include overlay(1, 0.6);
+}
+
+.call-to-action {
+  height: 25rem;
+  background-image: url(./../images/cta-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  &::after {
+    @include overlay(-1, 0.2);
+  }
+}

@@ -1,0 +1,78 @@
+h3 {
+  color: $headingColor;
+}
+
+.logo {
+  color: $headingColor;
+}
+
+.active {
+  background: $primaryColor;
+  color: white !important;
+}
+header {
+  .nav-item {
+    .nav-link {
+      &:hover:not(.active) {
+        color: $primaryColor !important;
+      }
+    }
+  }
+
+  .dropdown {
+    .dropdown-list {
+      @include transition-handling(0.3s);
+      @include position-dropdown(2, 130%);
+      li {
+        padding: 10px 0;
+        &:hover {
+          background-color: $primaryColor;
+          a:not(.dropdown-list-two a) {
+            color: white;
+          }
+        }
+      }
+      a {
+        padding: 10px 20px;
+        color: #444444;
+      }
+    }
+
+    .dropdown-list-two {
+      @include transition-handling(0.3s);
+      @include position-dropdown(-100%, 15px);
+
+      li:hover {
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  .navbar-nav {
+    .root-drop {
+      &:hover {
+        .dropdown-list {
+          opacity: 1;
+        }
+      }
+    }
+    .root-drop-two {
+      &:hover {
+        .dropdown-list-two {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  background-color: $primaryColor !important;
+
+  color: white !important;
+}
+
+@media (max-width: 540px) {
+  .dropdown-list-two {
+    left: 100% !important;
+  }
+}

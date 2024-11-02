@@ -1,0 +1,51 @@
+.services {
+  .container {
+    i {
+      @include handle-icons(2rem);
+    }
+    .row {
+      .services-item {
+        cursor: pointer;
+        .info {
+          @include transition-handling(0.5s);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background-color: $primaryColor;
+          z-index: 0;
+          @include transition-handling(0.4s);
+        }
+        &:hover::after {
+          height: 100%;
+        }
+        &:hover .info i,
+        &:hover .info h3,
+        &:hover .info p {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.serv-item {
+  img {
+    @include transition-handling(0.5s);
+  }
+}
+.serv-item:hover {
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1) !important;
+  img {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+}

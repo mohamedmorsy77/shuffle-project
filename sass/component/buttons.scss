@@ -1,0 +1,10 @@
+.get-started {
+  @include links-style(3rem, $primaryColor);
+}
+
+.read-more {
+  @include links-style(0.5rem, $primaryColor);
+  &:hover {
+    background-color: #39ab9a;
+  }
+}

@@ -1,0 +1,25 @@
+.contact {
+  .info-item {
+    background-color: rgb(157 125 125 / 4%);
+    i {
+      @include handle-icons(2rem);
+    }
+  }
+
+  form {
+    input::placeholder,
+    .my-textarea {
+      color: #ccc;
+    }
+    input:focus,
+    textarea:focus {
+      border: 1px solid $primaryColor;
+    }
+
+    background-color: rgb(157 125 125 / 4%);
+  }
+}
+
+.send-message {
+  @include links-style(0, $primaryColor);
+}

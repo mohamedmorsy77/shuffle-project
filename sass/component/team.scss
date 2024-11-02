@@ -1,0 +1,29 @@
+.team {
+  .person {
+    &:hover .person-info {
+      opacity: 1;
+    }
+    &:hover .person-content {
+      margin-bottom: 0 !important;
+    }
+    .person-content {
+      @include transition-handling(0.4s);
+    }
+    .person-info {
+      @include transition-handling(0.4s);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}

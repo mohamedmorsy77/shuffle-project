@@ -1,0 +1,10 @@
+.about {
+    .container {
+      li {
+        i {
+          @include handle-icons(1.5rem);
+        }
+      }
+    }
+  }
+  
